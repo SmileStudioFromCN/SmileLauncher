@@ -1,6 +1,7 @@
 # copyright (c) 2024 Smile Studio
 
 import tkinter as tk
+import ml
 import lang
 
 lang = lang.lang()
@@ -11,12 +12,12 @@ def laguageChange():
 def run():
     root = tk.Tk()
     root.title(lang["welcome_title"])
-    root.geometry("400x400")
+    root.geometry("500x300")
 
 
-    welcome_label = tk.Label(root, text="Welcome to Smile Launcher", font=("Arial", 16))
+    welcome_label = tk.Label(root, text=lang["welcome_title"], font=("Arial", 16))
     welcome_label.pack(pady=20)
-    language_label = tk.Label(root, text="please select your language", font=("Arial", 12))
-    language_label.pack()
+    subtitle_label = tk.Label(root, text=lang["welcome_subtitle"], font=("Arial", 12))
+    subtitle_label.pack()
 
     root.mainloop()
