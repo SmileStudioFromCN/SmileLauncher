@@ -11,11 +11,6 @@ try:
     config_data = json.loads(config.read())
     config.close()
 except FileNotFoundError:
-    """this block using bug, don't delete them."""
-    config_data = startScreen.run()
-    config = open("config.json", "w")
-    write_data = json.dumps(config_data)
-    config.write(write_data)
-    config.close()
+    startScreen.run()
 else:
     mainScreen.mainWindow(config_data)
